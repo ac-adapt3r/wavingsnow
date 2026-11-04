@@ -2,6 +2,7 @@ local definition = table.copy(core.registered_nodes["default:snow"])
 
 definition.waving = 2
 definition.drop = definition.drop or "default:snow"
+definition.groups.not_in_creative_inventory = 1
 definition.on_construct = function (pos)
     local nodeunder = core.get_node( vector.subtract(pos, vector.new(0, 1, 0)) )
 
